@@ -1,0 +1,65 @@
+.footer {
+  background-color: var(--gray-800);
+  color: var(--gray-200);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footerSection h3 {
+  color: var(--gray-100);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.footerSection p {
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footerSection a {
+  color: var(--gray-300);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerSection a:hover {
+  color: var(--primary-color);
+}
+
+.footerBottom {
+  border-top: 1px solid var(--gray-700);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 0.875rem;
+}
+
+/* Dark mode adjustments are not needed as footer is always dark */ 
