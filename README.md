@@ -156,6 +156,5 @@ Replace the URL with your backend API URL.
 
 ---
 
-For any questions or issues, please contact [your-email@example.com].
-
+For any questions or issues, please contact me.
 Happy coding!
