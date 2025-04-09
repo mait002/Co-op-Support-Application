@@ -1,0 +1,183 @@
+.header {
+  background-color: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  flex-direction: column;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.logo span {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuToggle span {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--foreground);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  color: var(--foreground);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.logoutButton {
+  color: var(--error-color);
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.logoutButton:hover {
+  color: var(--error-color);
+  opacity: 0.8;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  background-color: var(--gray-100);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  margin-left: 1rem;
+}
+
+.userInfo span {
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+    z-index: 10;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--background);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav.open {
+    right: 0;
+  }
+
+  .navList {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navItem {
+    margin: 1rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .userInfo {
+    margin: 1rem 0 0 0;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .userInfo {
+    background-color: var(--gray-800);
+  }
+  
+  .userInfo span {
+    color: var(--gray-300);
+  }
+  
+  .logoutButton {
+    color: #ff6b6b;
+  }
+  
+  .logoutButton:hover {
+    color: #ff6b6b;
+  }
+} 
