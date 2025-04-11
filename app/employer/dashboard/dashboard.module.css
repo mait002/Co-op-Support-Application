@@ -1,0 +1,413 @@
+.dashboardContainer {
+  padding: 2rem 1rem;
+}
+
+.dashboardHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dashboardHeader h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.dashboardHeader p {
+  color: var(--gray-600);
+}
+
+.loadingState {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.25rem;
+  color: var(--gray-500);
+}
+
+/* Search and Filter Bar */
+.searchFilterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius);
+  align-items: center;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+}
+
+.searchButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.searchButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterLabel {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  white-space: nowrap;
+}
+
+.filterSelect {
+  padding: 0.5rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  background-color: white;
+  min-width: 120px;
+}
+
+/* Stats Cards */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statsCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.statsIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+}
+
+.statsIcon[data-type="evaluations"] {
+  background-color: var(--primary-500);
+}
+
+.statsIcon[data-type="completed"] {
+  background-color: var(--success-500);
+}
+
+.statsIcon[data-type="students"] {
+  background-color: var(--info-500);
+}
+
+.statsIcon[data-type="total"] {
+  background-color: var(--warning-500);
+}
+
+.statsIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.statsContent {
+  flex: 1;
+}
+
+.statsValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  line-height: 1.2;
+}
+
+.statsLabel {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-top: 0.25rem;
+}
+
+.statsLink {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--primary-600);
+  text-decoration: none;
+}
+
+.statsLink:hover {
+  text-decoration: underline;
+}
+
+/* Table Styles */
+.tableCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.tableHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tableHeader h2 {
+  font-size: 1.25rem;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.viewAllLink {
+  font-size: 0.875rem;
+  color: var(--primary-600);
+  text-decoration: none;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}
+
+.tableContainer {
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background-color: var(--gray-50);
+  font-weight: 600;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.dataTable td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--gray-200);
+  color: var(--gray-700);
+}
+
+.dataTable tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badgePending {
+  background-color: var(--warning-100);
+  color: var(--warning-700);
+}
+
+.badgeSuccess {
+  background-color: var(--success-100);
+  color: var(--success-700);
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionButton:hover {
+  background-color: var(--gray-200);
+  color: var(--gray-900);
+}
+
+.actionButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+.noResults {
+  text-align: center;
+  color: var(--gray-500);
+  padding: 2rem;
+}
+
+.tablePagination {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.seeMoreLink {
+  color: var(--primary-600);
+  text-decoration: none;
+}
+
+.seeMoreLink:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .dashboardHeader h1 {
+    color: var(--gray-100);
+  }
+  
+  .dashboardHeader p {
+    color: var(--gray-400);
+  }
+  
+  .loadingState {
+    color: var(--gray-400);
+  }
+  
+  .searchFilterBar {
+    background-color: var(--gray-800);
+  }
+  
+  .searchInput {
+    background-color: var(--gray-700);
+    border-color: var(--gray-600);
+    color: var(--gray-100);
+  }
+  
+  .filterLabel {
+    color: var(--gray-300);
+  }
+  
+  .filterSelect {
+    background-color: var(--gray-700);
+    border-color: var(--gray-600);
+    color: var(--gray-100);
+  }
+  
+  .statsCard {
+    background-color: var(--gray-800);
+  }
+  
+  .statsValue {
+    color: var(--gray-100);
+  }
+  
+  .statsLabel {
+    color: var(--gray-400);
+  }
+  
+  .tableCard {
+    background-color: var(--gray-800);
+  }
+  
+  .tableHeader {
+    border-color: var(--gray-700);
+  }
+  
+  .tableHeader h2 {
+    color: var(--gray-100);
+  }
+  
+  .dataTable th {
+    background-color: var(--gray-900);
+    color: var(--gray-300);
+    border-color: var(--gray-700);
+  }
+  
+  .dataTable td {
+    color: var(--gray-300);
+    border-color: var(--gray-700);
+  }
+  
+  .actionButton {
+    background-color: var(--gray-700);
+    color: var(--gray-300);
+  }
+  
+  .actionButton:hover {
+    background-color: var(--gray-600);
+  }
+  
+  .noResults {
+    color: var(--gray-400);
+  }
+  
+  .tablePagination {
+    border-color: var(--gray-700);
+    color: var(--gray-400);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .searchFilterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filterGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .filterSelect {
+    width: 100%;
+  }
+} 
