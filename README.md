@@ -2,6 +2,15 @@
 
 This is the frontend repository for COSA, a comprehensive application designed to streamline the co-op program application and reporting process. This application allows students to apply for provisional acceptance to the co-op program, and later submit their work term reports. It also allows employers to provide evaluations for students who have completed work terms.
 
+### Contributors:
+Kent Romio (kent.romio@torontomu.ca)
+Dhruven Jayswal (dhruven.jayswal@torontomu.ca)
+Armin Farzanehnia (afarzanehnia@torontomu.ca)
+Nathan Chandra (nathan.l.chandra@torontomu.ca)
+Wilbert Chang (wilbert.chang@torontomu.ca)
+Maitreyee Das Urmi (maitreyee.urmi@torontomu.ca)
+
+
 ## Table of Contents
 
 1. [Project Structure](#project-structure)
