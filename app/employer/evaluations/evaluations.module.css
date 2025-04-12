@@ -1,0 +1,314 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #E2E8F0;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #3182CE;
+}
+
+.header p {
+  color: #A0AEC0;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Form Section */
+.formCard, .submissionsCard {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.formCard h2, .submissionsCard h2 {
+  color: #333333;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.evaluationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #333333;
+}
+
+.formGroup input, 
+.formGroup select, 
+.formGroup textarea {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #2D3748;
+  background-color: #2D3748;
+  color: #E2E8F0;
+  font-size: 1rem;
+}
+
+.formGroup input:focus, 
+.formGroup select:focus, 
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #3182CE;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Rating Selector */
+.ratingsSection {
+  background-color: #2D3748;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.ratingsSection h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #E2E8F0;
+}
+
+.ratingInstructions {
+  color: #A0AEC0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.ratingsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ratingsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ratingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ratingGroup label {
+  font-weight: 500;
+  color: #CBD5E0;
+}
+
+.ratingControls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ratingButton {
+  flex: 1;
+  background-color: #4A5568;
+  color: #E2E8F0;
+  border: none;
+  padding: 0.75rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ratingButton:hover {
+  background-color: #3182CE;
+}
+
+.ratingButton.selected {
+  background-color: #3182CE;
+  font-weight: bold;
+}
+
+.ratingLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #A0AEC0;
+}
+
+/* Submit Button */
+.formActions {
+  margin-top: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3182CE;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #2B6CB0;
+}
+
+.submitButton:disabled {
+  background-color: #4A5568;
+  cursor: not-allowed;
+}
+
+/* Submitted Evaluations */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  color: #A0AEC0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(65, 105, 225, 0.3);
+  border-top-color: #3182CE;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 0;
+  color: #A0AEC0;
+}
+
+.submissionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.submissionItem {
+  background-color: #2D3748;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.submissionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #3182CE;
+}
+
+.submissionHeader h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.workTerm {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.submissionDetails {
+  padding: 1rem;
+}
+
+.ratingsSummary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.ratingPill {
+  background-color: #4A5568;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #E2E8F0;
+}
+
+.ratingPill span {
+  color: #A0AEC0;
+  margin-right: 0.25rem;
+}
+
+.submissionComments {
+  background-color: #1A202C;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #CBD5E0;
+}
+
+.submissionMeta {
+  font-size: 0.8rem;
+  color: #A0AEC0;
+  text-align: right;
+} 

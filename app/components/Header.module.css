@@ -1,0 +1,204 @@
+.header {
+  background-color: #2B6CB0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: white;
+  font-weight: 700;
+}
+
+.logo span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuToggle span {
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+
+.navLink:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.logoutButton {
+  color: white;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+
+.userInfo span {
+  color: white;
+  font-weight: 500;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+    z-index: 10;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #2B6CB0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav.open {
+    right: 0;
+  }
+
+  .navList {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navItem {
+    margin: 0.75rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .navLink {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .userInfo {
+    margin: 1rem 0 0 0;
+  }
+  
+  .logoutButton {
+    padding: 0.75rem 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .userInfo {
+    background-color: var(--gray-800);
+  }
+  
+  .userInfo span {
+    color: var(--gray-300);
+  }
+  
+  .logoutButton {
+    color: #ff6b6b;
+  }
+  
+  .logoutButton:hover {
+    color: #ff6b6b;
+  }
+} 

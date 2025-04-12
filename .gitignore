@@ -1,0 +1,39 @@
+# OS junk
+.DS_Store
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Next.js build output
+.next/
+out/
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Supabase
+.supabase/
+supabase/.temp/
+supabase/migrations/.next/
+
+# Optional (if you use coverage/testing)
+coverage/
+.vitest/
+jest.config.js
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+
+# Misc
+*.log
+*.orig
+*.bak
+

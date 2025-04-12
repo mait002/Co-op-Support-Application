@@ -1,0 +1,104 @@
+.adminLayout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #1a202c;
+  color: white;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #2d3748;
+}
+
+.sidebarHeader h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sidebarToggle {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebarNav {
+  padding: 1rem 0;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: #a0aec0;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.sidebarLink:hover {
+  background-color: #2d3748;
+  color: white;
+}
+
+.sidebarLink.active {
+  background-color: #3182ce;
+  color: white;
+}
+
+.linkIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f7fafc;
+  overflow-y: auto;
+}
+
+/* Common styles for all admin pages */
+.pageHeader h1 {
+  color: #0070f3 !important; /* Blue color for all headers */
+}
+
+.pageHeader p {
+  color: #4a90e2 !important; /* Light blue for subtitles */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    z-index: 10;
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebarToggle {
+    display: block;
+  }
+  
+  .mainContent {
+    padding: 1.5rem;
+  }
+} 

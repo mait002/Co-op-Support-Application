@@ -1,0 +1,323 @@
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pageHeader h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  color: #4a5568;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #2b6cb0;
+}
+
+.backIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.spinner {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid #3182ce;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorContainer {
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.errorContainer h2 {
+  color: #c53030;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.returnButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.returnButton:hover {
+  background-color: #2b6cb0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailsSection {
+  background-color: #f8fafc;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.detailsSection h2 {
+  font-size: 1.25rem;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.infoItem span:not(.label):not(.statusBadge) {
+  color: #000000;
+  font-weight: 500;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 0.25rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.assigned {
+  background-color: #2563eb;
+  color: white;
+  border: 1px solid #1d4ed8;
+}
+
+.pending {
+  background-color: #7c3aed;
+  color: white;
+  border: 1px solid #6d28d9;
+}
+
+.submitted {
+  background-color: #ea580c;
+  color: white;
+  border: 1px solid #c2410c;
+}
+
+.approved {
+  background-color: #16a34a;
+  color: white;
+  border: 1px solid #15803d;
+}
+
+.rejected {
+  background-color: #dc2626;
+  color: white;
+  border: 1px solid #b91c1c;
+}
+
+.textContent {
+  white-space: pre-wrap;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.evaluationPdf {
+  margin-bottom: 1.5rem;
+}
+
+.evaluationPdf h3, .evaluationDetails h3 {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+}
+
+.pdfLink {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  color: #4a5568;
+  font-size: 0.875rem;
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.2s;
+}
+
+.pdfLink:hover {
+  background-color: #edf2f7;
+}
+
+.pdfIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #e53e3e;
+}
+
+.rating {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.actionsSection {
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.actionsSection h2 {
+  font-size: 1.25rem;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.commentBox {
+  margin-bottom: 1.5rem;
+}
+
+.commentBox label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.commentBox textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.statusButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.approveButton {
+  background-color: #48bb78;
+  color: white;
+}
+
+.approveButton:hover {
+  background-color: #38a169;
+}
+
+.rejectButton {
+  background-color: #f56565;
+  color: white;
+}
+
+.rejectButton:hover {
+  background-color: #e53e3e;
+}
+
+.statusMessage {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  background-color: #f7fafc;
+}
+
+.statusMessage p {
+  color: #000000;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.noEvaluation {
+  padding: 1rem;
+  background-color: #f7fafc;
+  border-radius: 0.25rem;
+  text-align: center;
+  color: #718096;
+} 

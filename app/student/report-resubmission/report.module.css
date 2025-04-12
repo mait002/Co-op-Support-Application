@@ -1,0 +1,260 @@
+.reportCard {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 2rem auto;
+}
+
+.reportHeader {
+  padding: 2rem;
+  border-bottom: 1px solid var(--gray-200);
+  text-align: center;
+  background-color: var(--gray-50);
+}
+
+.reportHeader h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--gray-900);
+}
+
+.reportHeader p {
+  color: var(--gray-600);
+  margin-bottom: 0;
+}
+
+.reportForm {
+  padding: 2rem;
+}
+
+.formSection {
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.errorMessage {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--error-color);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 2rem 0;
+  font-size: 0.875rem;
+}
+
+.inputError {
+  border-color: var(--error-color) !important;
+}
+
+.errorText {
+  color: var(--error-color);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--gray-700);
+}
+
+.fileUpload {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fileInputInfo {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.fileName {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.termsContainer {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
+.checkboxLabel input {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.25rem;
+}
+
+.formActions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Success card styles */
+.successCard {
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  color: var(--success-color);
+}
+
+.successIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.successCard h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+}
+
+.successCard p {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.successActions {
+  margin-top: 2rem;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .reportCard,
+  .successCard {
+    background-color: var(--gray-800);
+  }
+  
+  .reportHeader,
+  .termsContainer {
+    background-color: var(--gray-900);
+    border-color: var(--gray-700);
+  }
+  
+  .reportHeader h1,
+  .successCard h1 {
+    color: var(--gray-100);
+  }
+  
+  .reportHeader p,
+  .successCard p {
+    color: var(--gray-400);
+  }
+  
+  .radioLabel {
+    color: var(--gray-300);
+  }
+  
+  .fileInputInfo {
+    color: var(--gray-400);
+  }
+  
+  .checkboxLabel {
+    color: var(--gray-300);
+  }
+  
+  .errorMessage {
+    background-color: rgba(220, 38, 38, 0.2);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .radioGroup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .formActions button {
+    width: 100%;
+  }
+}
+
+.reviewFeedback {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fff5f5;
+  border-left: 4px solid #e53e3e;
+  border-radius: 0.25rem;
+}
+
+.reviewFeedback h3 {
+  color: #e53e3e;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.reviewFeedback p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #3182ce;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} 

@@ -1,0 +1,73 @@
+.footer {
+  background-color: #1A365D;
+  color: #E2E8F0;
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footerSection h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.footerSection p {
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #CBD5E0;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footerSection a {
+  color: #CBD5E0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.25rem 0;
+  display: inline-block;
+}
+
+.footerSection a:hover {
+  color: #4299E1;
+  text-decoration: underline;
+}
+
+.footerBottom {
+  border-top: 1px solid #2D3748;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #A0AEC0;
+  font-size: 0.875rem;
+}
+
+/* Dark mode adjustments are not needed as footer is always dark */ 

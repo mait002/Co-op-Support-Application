@@ -1,0 +1,362 @@
+.pageHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.pageHeader h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: whitesmoke;
+}
+
+.pageHeader p {
+  color: whitesmoke;
+  margin: 0;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  color: #4a90e2;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.backIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+}
+
+.searchBox {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #666;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterLabel {
+  font-weight: 500;
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #555;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterButton:hover {
+  background-color: #f0f0f0;
+}
+
+.filterButton.active {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #4a90e2;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+}
+
+.emptyStateIcon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  color: #9ca3af;
+}
+
+.emptyState h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.emptyState p {
+  color: #666;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.evaluationsTable {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.evaluationsTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.evaluationsTable th {
+  padding: 1rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.evaluationsTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+}
+
+.evaluationsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.actionsColumn {
+  width: 220px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.statusBadge.pending {
+  background-color: #fff8e6;
+  color: #b08800;
+}
+
+.statusBadge.submitted {
+  background-color: #e6f7ff;
+  color: #0070f3;
+}
+
+.statusBadge.approved {
+  background-color: #e6fff2;
+  color: #00aa55;
+}
+
+.statusBadge.rejected {
+  background-color: #ffe6e6;
+  color: #e53e3e;
+}
+
+.companyName {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.actionsCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.viewButton {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.viewButton:hover {
+  background-color: #3a7bc8;
+}
+
+.statusButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.approveButton, .rejectButton {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.approveButton {
+  background-color: #e6fff2;
+  color: #00aa55;
+}
+
+.approveButton:hover {
+  background-color: #d1ffea;
+}
+
+.rejectButton {
+  background-color: #ffe6e6;
+  color: #e53e3e;
+}
+
+.rejectButton:hover {
+  background-color: #ffd1d1;
+}
+
+@media (max-width: 1200px) {
+  .filterBar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filterGroup {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .evaluationsTable {
+    overflow-x: auto;
+  }
+  
+  .evaluationsTable table {
+    min-width: 800px;
+  }
+}
+
+/* Student info styles */
+.studentName {
+  font-weight: 500;
+}
+
+.studentEmail {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* Company styles */
+.companyPosition {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.missingInfo {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Rating styles */
+.averageRating {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a90e2;
+}
+
+.outOf {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #666;
+  margin-left: 2px;
+}
+
+.ratingBreakdown {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+/* Action button styles */
+.viewDetailsButton {
+  padding: 0.5rem 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.viewDetailsButton:hover {
+  background-color: #3a7bc8;
+} 

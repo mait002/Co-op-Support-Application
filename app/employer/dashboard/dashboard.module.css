@@ -1,0 +1,678 @@
+.dashboardHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboardHeader h1 {
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.dashboardHeader p {
+  color: #718096;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.spinner {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid #3182ce;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorContainer {
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.errorContainer h2 {
+  color: #e53e3e;
+  margin-bottom: 0.5rem;
+}
+
+.retryButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: #2c5282;
+}
+
+.searchContainer {
+  margin-bottom: 1.5rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.emptyStateIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #a0aec0;
+  margin-bottom: 1rem;
+}
+
+.emptyStateIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.emptyState h2 {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  color: #718096;
+}
+
+.assignmentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.assignmentsSection h2 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.studentCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.studentInfo {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.studentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.studentHeader h3 {
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin: 0;
+}
+
+.studentDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailLabel {
+  font-size: 0.75rem;
+  color: #718096;
+  margin-bottom: 0.25rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.assigned {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.pending {
+  background-color: #faf5ff;
+  color: #6b46c1;
+}
+
+.submitted {
+  background-color: #fffaf0;
+  color: #c05621;
+}
+
+.approved {
+  background-color: #f0fff4;
+  color: #2f855a;
+}
+
+.rejected {
+  background-color: #fff5f5;
+  color: #c53030;
+}
+
+.reportsSection, .evaluationSection {
+  padding-top: 0.5rem;
+}
+
+.reportsSection h4, .evaluationSection h4 {
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.noReports {
+  color: #718096;
+  font-style: italic;
+  padding: 0.5rem 0;
+}
+
+.reportsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reportItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f7fafc;
+  border-radius: 0.375rem;
+}
+
+.reportInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.reportTitle {
+  font-weight: 500;
+  color: #2d3748;
+  font-size: 0.875rem;
+}
+
+.reportMeta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.reportStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+.viewReportButton {
+  padding: 0.375rem 0.75rem;
+  background-color: #4299e1;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.viewReportButton:hover {
+  background-color: #3182ce;
+}
+
+.evaluationSection {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}
+
+.evaluationActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.evaluateButton {
+  padding: 0.5rem 1rem;
+  background-color: #48bb78;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.evaluateButton:hover {
+  background-color: #38a169;
+}
+
+.refreshButton {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.refreshButton:hover {
+  background-color: #3a7bc8;
+}
+
+.adminNote {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #e6f7ff;
+  border: 1px solid #91d5ff;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  color: #0050b3;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.errorDetails {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 0.375rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.errorDetails p {
+  color: #c53030;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.fixDatabaseButton {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #ed8936;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.fixDatabaseButton:hover {
+  background-color: #dd6b20;
+}
+
+@media (max-width: 768px) {
+  .studentsTable {
+    overflow-x: auto;
+  }
+  
+  .studentsTable table {
+    min-width: 800px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboardHeader {
+    border-bottom-color: #4a5568;
+  }
+  
+  .dashboardHeader h1 {
+    color: #ffffff;
+  }
+  
+  .dashboardHeader p {
+    color: #e2e8f0;
+  }
+  
+  .studentCard,
+  .emptyState {
+    background-color: #2d3748;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .emptyState h2 {
+    color: #ffffff;
+  }
+  
+  .emptyState p {
+    color: #e2e8f0;
+  }
+  
+  .searchInput {
+    background-color: #1a202c;
+    color: #ffffff;
+    border-color: #4a5568;
+  }
+  
+  .studentInfo {
+    border-bottom-color: #4a5568;
+  }
+  
+  .studentHeader h3 {
+    color: #ffffff;
+  }
+  
+  .detailLabel {
+    color: #cbd5e0;
+  }
+  
+  .detailValue {
+    color: #ffffff;
+  }
+  
+  .reportsSection h4,
+  .evaluationSection h4 {
+    color: #ffffff;
+  }
+  
+  .reportItem {
+    background-color: #1a202c;
+    border-color: #4a5568;
+  }
+  
+  .reportTitle {
+    color: #ffffff;
+  }
+  
+  .reportMeta {
+    color: #cbd5e0;
+  }
+  
+  .assignmentsSection h2 {
+    color: #ffffff;
+  }
+  
+  .noReports {
+    color: #cbd5e0;
+  }
+  
+  .reportsTableContainer {
+    background-color: #2d3748;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .reportsTable th {
+    background-color: #1a202c;
+    color: #ffffff;
+  }
+  
+  .reportsTable td {
+    color: #ffffff;
+    border-color: #4a5568;
+  }
+  
+  .reportsTable tr {
+    background-color: #2d3748;
+  }
+  
+  .reportsTable tr:hover {
+    background-color: #4a5568;
+  }
+  
+  .noReportsBadge {
+    background-color: #4a5568;
+    color: #cbd5e0;
+  }
+  
+  .reportBadge {
+    background-color: #4a5568 !important;
+    color: #ffffff !important;
+  }
+  
+  .viewReportLink {
+    color: #63b3ed !important;
+  }
+  
+  .evaluateButton {
+    background-color: #38a169 !important;
+    color: #ffffff !important;
+  }
+}
+
+/* Reports Table Styles */
+.reportsTableContainer {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.reportsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reportsTable th {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.reportsTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+}
+
+.reportsTable tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Report Badge Styles */
+.reportBadges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reportBadgeContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reportBadge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.noReportsBadge {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.reportBadge.pending {
+  background-color: #faf5ff;
+  color: #6b46c1;
+}
+
+.reportBadge.approved {
+  background-color: #f0fff4;
+  color: #2f855a;
+}
+
+.reportBadge.rejected {
+  background-color: #fff5f5;
+  color: #c53030;
+}
+
+.reportBadge.submitted {
+  background-color: #fffaf0;
+  color: #c05621;
+}
+
+.viewReportLink {
+  font-size: 0.75rem;
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.viewReportLink:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .reportsTableContainer {
+    background-color: var(--background-card);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .reportsTable th {
+    background-color: var(--background);
+  }
+  
+  .reportsTable td,
+  .reportsTable th {
+    border-color: var(--border-color);
+  }
+  
+  .reportsTable tr:hover {
+    background-color: var(--accent-1);
+  }
+}
+
+/* Status dropdown styles */
+.statusWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.statusSelect {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  font-size: 0.875rem;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+.statusSelect:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+.statusSelect:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Submit evaluation button container */
+.evaluationActionContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.submitEvaluationBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  background-color: #48bb78;
+  color: white;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.submitEvaluationBtn:hover {
+  background-color: #38a169;
+}
+
+@media (prefers-color-scheme: dark) {
+  .statusSelect {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    border-color: #4a5568;
+  }
+  
+  .submitEvaluationBtn {
+    background-color: #38a169;
+  }
+  
+  .submitEvaluationBtn:hover {
+    background-color: #2f855a;
+  }
+} 

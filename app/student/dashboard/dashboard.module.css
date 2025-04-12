@@ -1,0 +1,445 @@
+.dashboardHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.dashboardHeader h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.dashboardHeader p {
+  color: var(--gray-600);
+  font-size: 1.1rem;
+}
+
+.dashboardActions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Tab styles */
+.tabContainer {
+  margin-top: 2rem;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 1.5rem;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+  color: var(--primary-color);
+}
+
+.tabButton.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tabContent {
+  min-height: 300px;
+}
+
+/* Loading spinner */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius);
+}
+
+.emptyState p {
+  margin-bottom: 1.5rem;
+  color: var(--gray-600);
+}
+
+/* Application card styles */
+.applicationsList, .reportsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.applicationCard, .reportCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+}
+
+.applicationHeader, .reportHeader {
+  padding: 1rem;
+  background-color: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.applicationHeader h3, .reportHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--gray-800);
+}
+
+.statusContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.statusLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #ebf8ff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #bee3f8;
+}
+
+.statusBadge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  text-transform: uppercase;
+}
+
+.statusPending {
+  background-color: #edf2f7;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+}
+
+.statusReviewing {
+  background-color: #4299e1;
+  color: white;
+  border: 1px solid #3182ce;
+}
+
+.statusApproved {
+  background-color: #48bb78;
+  color: white;
+  border: 1px solid #38a169;
+}
+
+.statusRejected {
+  background-color: #f56565;
+  color: white;
+  border: 1px solid #e53e3e;
+}
+
+.applicationDetails, .reportDetails {
+  padding: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  margin-bottom: 0.75rem;
+  align-items: flex-start;
+}
+
+.detailLabel {
+  width: 120px;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+/* Add styling for the detail values */
+.detailItem span:not(.detailLabel) {
+  color: #0066cc; /* Blue text for light mode */
+  font-weight: 500;
+}
+
+.comments {
+  margin-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 1rem;
+}
+
+.comments p {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius);
+  font-style: italic;
+  color: #0066cc; /* Blue text for light mode */
+}
+
+.resumeLink {
+  margin-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.linkButton {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.linkButton:hover {
+  background-color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.reportLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.reportLink:hover {
+  text-decoration: underline;
+}
+
+.reportActions {
+  padding: 1.25rem;
+  border-top: 1px solid var(--gray-200);
+  background-color: var(--gray-50);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .dashboardHeader {
+    border-color: var(--gray-700);
+  }
+  
+  .dashboardHeader h1 {
+    color: var(--gray-100);
+  }
+  
+  .dashboardHeader p {
+    color: var(--gray-400);
+  }
+  
+  .tabs {
+    border-color: var(--gray-700);
+  }
+  
+  .tabButton {
+    color: var(--gray-400);
+  }
+  
+  .emptyState {
+    background-color: var(--gray-800);
+  }
+  
+  .emptyState p {
+    color: var(--gray-300);
+  }
+  
+  .applicationCard, .reportCard {
+    background-color: var(--gray-800);
+    border-color: var(--gray-700);
+  }
+  
+  .applicationHeader, .reportHeader {
+    background-color: var(--gray-900);
+    border-color: var(--gray-700);
+  }
+  
+  .applicationHeader h3, .reportHeader h3 {
+    color: var(--gray-100);
+  }
+  
+  .statusPending {
+    background-color: var(--gray-700);
+    color: var(--gray-300);
+  }
+  
+  .detailLabel {
+    color: var(--gray-300);
+  }
+  
+  .detailItem span:not(.detailLabel) {
+    color: #66ccff; /* Light blue text for dark mode */
+  }
+  
+  .comments {
+    border-color: var(--gray-700);
+  }
+  
+  .comments p {
+    color: #66ccff; /* Light blue text for dark mode */
+    background-color: var(--gray-800);
+  }
+  
+  .reportActions {
+    border-color: var(--gray-700);
+    background-color: var(--gray-900);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dashboardHeader h1 {
+    font-size: 1.5rem;
+  }
+  
+  .tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .tabButton {
+    padding: 0.75rem 1rem;
+  }
+  
+  .detailItem {
+    flex-direction: column;
+  }
+  
+  .detailLabel {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Evaluations Tab */
+.evaluationsTab {
+  padding: 1rem 0;
+}
+
+.evaluationsTab h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.evaluationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.evaluationCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.evaluationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.evaluationHeader h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #2d3748;
+}
+
+.evaluationDetails {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .evaluationDetails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.evaluationActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.viewButton {
+  padding: 0.5rem 1rem;
+  background-color: #4299e1;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.viewButton:hover {
+  background-color: #3182ce;
+}
+
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.viewMoreLink {
+  font-size: 0.875rem;
+  color: #4299e1;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #4299e1;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.viewMoreLink:hover {
+  background-color: #4299e1;
+  color: white;
+} 
