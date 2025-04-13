@@ -1,16 +1,17 @@
 # COSA - Co-op Support Application
 
-This is the frontend repository for COSA, a comprehensive application designed to streamline the co-op program application and reporting process. This application allows students to apply for provisional acceptance to the co-op program, and later submit their work term reports. It also allows employers to provide evaluations for students who have completed work terms.
+**COSA** is a full-stack web application designed to streamline the co-op program process across three key stakeholders: students, employers, and co-op coordinators. Built with **Next.js** and powered by **Supabase**, COSA supports everything from application submission and report uploads to employer evaluations and administrative review.
+
 
 It's Live At: https://coop-support-application.vercel.app/ 
  
 ### Contributors:
-Kent Romio (kent.romio@torontomu.ca)
-Dhruven Jayswal (dhruven.jayswal@torontomu.ca)
-Armin Farzanehnia (afarzanehnia@torontomu.ca)
-Nathan Chandra (nathan.l.chandra@torontomu.ca)
-Wilbert Chang (wilbert.chang@torontomu.ca)
-Maitreyee Das Urmi (maitreyee.urmi@torontomu.ca)
+- Kent Romio 
+- Dhruven Jayswal
+- Armin Farzanehnia 
+- Nathan Chandra 
+- Wilbert Chang
+- Maitreyee Das Urmi 
 
 
 ## Table of Contents
