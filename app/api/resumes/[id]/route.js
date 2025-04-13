@@ -60,10 +60,11 @@ export async function GET(request, { params }) {
     console.log(`Trying to fetch file from bucket: ${bucket}, path: ${resumePath}`);
     
     // First try direct download
-    const { data, error } = await supabase
+    let data, error;
+    ({ data, error } = await supabase
       .storage
       .from(bucket)
-      .download(resumePath);
+      .download(resumePath));
     
     if (error) {
       console.error('Error on first attempt:', error);
